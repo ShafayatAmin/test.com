@@ -1,0 +1,225 @@
+/* Body */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('https://img.freepik.com/free-photo/night-landscape-with-blue-sky_1048-5101.jpg?t=st=1729835515~exp=1729839115~hmac=8db668b051d10b193067f2916ac113642b6ba4b5116cf972f1e155d764255b06&w=1060') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.background-container {
+    position: relative;
+    overflow: hidden;
+    background: url('https://img.freepik.com/free-photo/night-landscape-with-blue-sky_1048-5101.jpg?t=st=1729835515~exp=1729839115~hmac=8db668b051d10b193067f2916ac113642b6ba4b5116cf972f1e155d764255b06&w=1060') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    margin-bottom: 60px;
+}
+
+/* Header */
+header {
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: lightblue;
+    animation: fadeIn 3s ease-in-out;
+    margin-left: 10px;
+}
+
+.logo img {
+    width: 150px;
+    border-radius: 100%;
+}
+
+/* Sidebar */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 50px;
+    z-index: 1000;
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 25px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+#close-btn {
+    position: absolute;
+    top: 0;
+    right: 20px;
+    font-size: 30px;
+}
+
+.menu-icon {
+    font-size: 25px;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    color: white;
+}
+
+/* Sidebar open state */
+.sidebar.open {
+    width: 80%;
+}
+
+/* মূল কনটেন্ট */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.letters-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* গ্লাস বাক্স */
+.glass-box {
+    width: 80%;
+    max-width: 280px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg, rgb(0, 102, 204) 0%, rgb(197, 0, 204) 100%);
+    backdrop-filter: blur(10px);
+    box-shadow: 3px 3px 15px 3px rgba(255, 255, 255, 0.5);
+    border: 2px solid rgb(154, 104, 214);
+    animation: rgbGlow 3s infinite alternate, gradientMove 3s ease infinite;
+}
+
+.glass-box:hover {
+    transform: scale(1.05);
+    box-shadow: 3px 3px 20px 3px rgba(255, 255, 255, 0.8);
+    background: rgb(100, 167, 235);
+    border-color: rgb(204, 0, 105);
+}
+
+/* Button */
+.btn {
+    display: flex;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: solid rgb(154, 104, 214);
+    font-family: "system-ui";
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    transition: 300ms;
+    width: 100%;
+    max-width: 335px;
+    box-shadow: rgb(255, 255, 255) 5px 5px 25px 5px;
+    border-radius: 5px;
+    background: linear-gradient(90deg, rgb(0, 102, 204) 0%, rgb(197, 0, 204) 100%);
+    font-weight: 500;
+    justify-content: center;
+    align-items: center;
+    animation: gradientMove 3s ease infinite;
+}
+
+.btn:hover {
+    background: rgb(100, 167, 235);
+    border-color: rgb(204, 0, 105);
+    border-width: 2px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 12px;
+}
+
+/* অ্যানিমেশন */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes rgbGlow {
+    0% { color: rgb(0, 174, 255); text-shadow: 0 0 5px rgba(255, 0, 0, 0.8), 0 0 10px rgba(255, 0, 0, 0.8); }
+    33% { color: rgb(42, 255, 106); text-shadow: 0 0 5px rgba(0, 255, 0, 0.8), 0 0 10px rgba(0, 255, 0, 0.8); }
+    66% { color: rgb(255, 255, 255); text-shadow: 0 0 5px rgba(0, 0, 255, 0.8), 0 0 10px rgba(0, 0, 255, 0.8); }
+    100% { color: rgb(208, 60, 253); text-shadow: 0 0 5px rgba(255, 0, 0, 0.8), 0 0 10px rgba(255, 0, 0, 0.8); }
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+/* ছোট পর্দার জন্য CSS */
+@media (max-width: 540px) {
+    .glass-box, .btn {
+        width: 100%;
+        max-width: 250px;
+        font-size: 18px;
+    }
+
+    .letters-container {
+        gap: 20px;
+    }
+
+    .logo-name {
+        font-size: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}

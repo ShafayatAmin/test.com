@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="about-us.css">
+    <link rel="icon" href="Logo.jpg" type="image/png">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+           <a href="index.html"> <img src="Logo.jpeg" alt="Logo" class="logo"></a>
+            <div class="logo-name">TMKM Class 9 </div>
+        </div>
+        <div class="menu-icon" id="menu-icon">
+            &#9776; <!-- Hamburger icon -->
+        </div>
+        <!-- Sidebar Menu -->
+        <div class="sidebar" id="sidebar">
+            <a href="index.html">Home</a>
+            <a href="class-routine.html">Class Routine</a>
+            <a href="all-subjects.html">All Subjects</a>
+            <a href="special-announcements.html">Special Announcements</a>
+            <a href="about-us.html">About Us</a>
+            <a href="contact-us.html">Contact Us</a>
+            <a href="#" id="close-btn">&times;</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="about-us-section">
+            <h1>About Us</h1>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="shafu0010.jpg" alt="About Us">
+                </div>
+                <div class="about-text">
+                    <h2>Our Mission</h2>
+                    <span style="background-color: black;">আমাদের লক্ষ্য হল আপনাকে আপনার প্রাপ্য সঠিক তথ্য দেওয়া এবং এক শাখা অন্য শাখার সাথে যোগাযোগ শক্ত করা আমরা যাতে মিলেমিশে থাকতে পারি এবং একে অপরের সহযোগিতা করি। এই ওয়েবসাইটে আমরা আমাদের ক্লাস সম্পর্কে সব ধরনের তথ্য যোগ করার চেষ্টা করেছি। কিন্তু যদি আপনি কিছু অনুপস্থিত বা কোন সমস্যা খুঁজে পান তাহলে আমাদের সাথে যোগাযোগ করুন। সব শেষে আমরাও মানুষ।</span>
+                    <h2>Our History</h2>
+                    <span style="background-color: black;">
+                        Once upon a time, there lived a man who was weak, both in body and spirit. He often found himself on the losing side of life, beaten down by those stronger than him. But one day, after being brutally attacked, something inside him snapped. He decided that he would never be helpless again. He trained relentlessly, honing his physical strength and mastering his fighting skills. His arms became powerful weapons, and for a while, he felt invincible.<br><br>
+                
+                        But as time passed, he realized that raw strength wasn't everything. There was a void inside him that brute force couldn't fill. So, he abandoned the path of violence and turned inward, seeking power within his mind. He delved deep into his thoughts, sharpening his intellect and expanding his understanding of the world. He became wise, capable of outthinking any opponent.<br><br>
+                
+                        Yet, despite his newfound strength and wisdom, there was a darkness that lingered within him. He began to feel a strange, unsettling emotion—a pull toward the shadows, where he could use his skills unseen, without recognition or praise. He became a ghost in the dark, performing acts of great skill and bravery, but never stepping into the light to claim credit.<br><br>
+                
+                        This hidden life brought him a peculiar kind of happiness, a thrill that made his heart race as if he were on the edge of life and death. It was a secret joy, one that no one else could understand. And even now, that feeling, that rush, keeps him tied to the darkness. He loves it, embraces it, and would never trade it for anything else.
+                    </span><br><br>
+                    <span style="background-color: black;">Thank you</span>
+                    <h2>Our Team</h2>
+                    <span style="background-color: black;">এই অ্যাপটি তৈরি করেছেন শাফায়াত আমিন।</span>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="button-container">
+        <a href="contact-us.html" class="btn">
+          <button class="btn">Please Contact Us</button>
+        </a>
+    </div>
+    <footer>
+        <p>&copy; 2024 TMKM Class 9. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Disable screenshot and screen recording (works for most screen capturing tools)
+const blockScreenCapture = () => {
+    const mediaDevices = navigator.mediaDevices;
+    if (mediaDevices && mediaDevices.getDisplayMedia) {
+        mediaDevices.getDisplayMedia = function () {
+            throw new Error('Screen capture is disabled.');
+        };
+    }
+};
+
+blockScreenCapture();
+
+// Get the sidebar and menu icon elements
+const sidebar = document.getElementById('sidebar');
+const menuIcon = document.getElementById('menu-icon');
+const closeBtn = document.getElementById('close-btn');
+
+// Open sidebar when the menu icon is clicked
+menuIcon.addEventListener('click', () => {
+    sidebar.classList.add('open');
+});
+
+// Close sidebar when the close button is clicked
+closeBtn.addEventListener('click', () => {
+    sidebar.classList.remove('open');
+});
+
+// Close the sidebar if the user clicks outside the sidebar
+window.addEventListener('click', function (e) {
+    if (!sidebar.contains(e.target) && !menuIcon.contains(e.target)) {
+        sidebar.classList.remove('open');
+    }
+});
+    </script>   
+</body>
+</html>

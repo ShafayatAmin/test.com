@@ -1,0 +1,177 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('https://img.freepik.com/free-photo/night-landscape-with-blue-sky_1048-5101.jpg?t=st=1729835515~exp=1729839115~hmac=8db668b051d10b193067f2916ac113642b6ba4b5116cf972f1e155d764255b06&w=1060') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+    margin-bottom: 60px;
+}
+
+/* Header */
+header {
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo and Navigation */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-name {
+    font-size: 2rem;
+    font-weight: bold;
+    color: lightblue;
+    animation: fadeIn 3s ease-in-out;
+    margin-left: 10px;
+}
+
+.logo img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+.routine-container {
+    margin-bottom: 30px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    overflow-x: auto;
+}
+
+.routine-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+.routine-table th, .routine-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+/* Mobile-specific Styles */
+@media (max-width: 768px) {
+    .routine-container {
+        padding: 10px;
+    }
+
+    .routine-table th, .routine-table td {
+        padding: 5px;
+        font-size: 0.9rem;
+    }
+
+    .logo-name {
+        font-size: 1.8rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    animation: fadeInSlideUp 2s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInSlideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Button Styling */
+@import url('https://fonts.googleapis.com/css2?Roboto&display=swap');
+.btn {
+    display: flex;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: solid rgb(154, 104, 214);
+    font-family: "system-ui";
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    width: 335px;
+    box-shadow: rgb(255, 255, 255) 5px 5px 25px 5px;
+    border-radius: 5px;
+    background: linear-gradient(90deg, rgb(0, 102, 204) 0%, rgb(197, 0, 204) 100%);
+    font-weight: 500;
+    justify-content: center;
+    align-items: center;
+    animation: gradientMove 3s ease infinite;
+}
+
+.btn:hover {
+    color: rgb(255, 255, 255);
+    width: 337px;
+    background: rgb(100, 167, 235);
+    border-color: rgb(204, 0, 105);
+    border-width: 2px;
+    border-style: solid;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+@keyframes rgbAnimation {
+    0% { color: red; }
+    33% { color: green; }
+    66% { color: blue; }
+    100% { color: red; }
+}
+
+.animated-bold-rgb {
+    font-weight: bold;
+    animation: rgbAnimation 2s infinite;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.7);
+    font-size: 24px;
+    text-align: center;
+    vertical-align: middle;
+}

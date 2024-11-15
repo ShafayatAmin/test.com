@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Routine</title>
+    <link rel="stylesheet" href="class-routine.css">
+    <link rel="icon" href="Logo.jpg" type="image/png">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <div class="logo-name">TMKM Class 9</div>
+            <div class="logo">
+                <a href="index.html"> <img src="Logo.jpeg" alt="Logo" class="logo"></a>
+            </div>
+            <div class="menu-icon" id="menu-icon">
+                &#9776; <!-- Hamburger icon -->
+            </div>
+        </div>
+
+        <!-- Sidebar Menu -->
+    <div class="sidebar" id="sidebar">
+        <a href="home.html">Home</a>
+        <a href="class-routine.html">Class Routine</a>
+        <a href="all-subjects.html">All Subjects</a>
+        <a href="special-announcements.html">Special Announcements</a>
+        <a href="about-us.html">About Us</a>
+        <a href="contact-us.html">Contact Us</a>
+        <a href="#" id="close-btn">&times;</a>
+    </div>
+
+    </header>
+
+    <main>
+        
+        <div class="letters-container">
+            <a href="A.html" class="glass-box">A</a>
+            <a href="B.html" class="glass-box">B</a>
+            <a href="C.html" class="glass-box">C</a>
+            <a href="D.html" class="glass-box">D</a>
+        </div>
+    </main>
+    <div class="button-container">
+        <a href="all-subjects.html" class="btn">
+          <button class="btn">Check All The Subjects</button>
+        </a>
+    </div><br><br><br>
+    <footer>
+        <p>&copy; 2024 TMKM Class 9. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Disable screenshot and screen recording (works for most screen capturing tools)
+const blockScreenCapture = () => {
+    const mediaDevices = navigator.mediaDevices;
+    if (mediaDevices && mediaDevices.getDisplayMedia) {
+        mediaDevices.getDisplayMedia = function () {
+            throw new Error('Screen capture is disabled.');
+        };
+    }
+};
+
+blockScreenCapture();
+
+// Get the sidebar and menu icon elements
+const sidebar = document.getElementById('sidebar');
+const menuIcon = document.getElementById('menu-icon');
+const closeBtn = document.getElementById('close-btn');
+
+// Open sidebar when the menu icon is clicked
+menuIcon.addEventListener('click', () => {
+    sidebar.classList.add('open');
+});
+
+// Close sidebar when the close button is clicked
+closeBtn.addEventListener('click', () => {
+    sidebar.classList.remove('open');
+});
+
+// Close the sidebar if the user clicks outside the sidebar
+window.addEventListener('click', function (e) {
+    if (!sidebar.contains(e.target) && !menuIcon.contains(e.target)) {
+        sidebar.classList.remove('open');
+    }
+});
+    </script>
+</body>
+</html>
